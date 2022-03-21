@@ -15,24 +15,50 @@ public class Employee {
   private long id;
 	
 	@Column(name = "first_name")
-  private String firstname;
+  private String first_name;
 	
 	@Column(name = "last_name")
-  private String lastname;
+  private String last_name;
 	
 	@Column(name = "email_id")
   private String emailId;
-  
+	
+	@Column(name = "posting")
+  private String posting;
+		
+	@Column(name = "phone")
+  private String phone;
+		
+	@Column(name = "position")
+  private String position;
+	
+	@Column(name = "leaves")
+	  private String leaves;
+		
+		
   public Employee() {
 	  
   }
   
-public Employee(String firstname, String lastname, String emailId) {
+public Employee(String first_name, String last_name, String emailId,String posting,String phone,String position,String leaves) {
 	super();
-	this.firstname = firstname;
-	this.lastname = lastname;
+	this.first_name = first_name;
+	this.last_name = last_name;
 	this.emailId = emailId;
+	this.posting = posting;
+	this.phone = phone;
+	this.position = position;
+	this.leaves = leaves;
+	
 }
+public String getPosting() {
+	return posting;
+}
+
+public void setPosting(String posting) {
+	this.posting = posting;
+}
+
 public long getId() {
 	return id;
 }
@@ -40,22 +66,46 @@ public void setId(long id) {
 	this.id = id;
 }
 public String getFirstname() {
-	return firstname;
+	return first_name;
 }
 public void setFirstname(String firstname) {
-	this.firstname = firstname;
+	this.first_name = firstname;
 }
 public String getLastname() {
-	return lastname;
+	return last_name;
 }
 public void setLastname(String lastname) {
-	this.lastname = lastname;
+	this.last_name = lastname;
 }
 public String getEmailId() {
 	return emailId;
 }
 public void setEmailId(String emailId) {
 	this.emailId = emailId;
+}
+
+public String getPhone() {
+	return phone;
+}
+
+public void setPhone(String phone) {
+	this.phone = phone;
+}
+
+public String getPosition() {
+	return position;
+}
+
+public void setPosition(String position) {
+	this.position = position;
+}
+
+public String getLeaves() {
+	return leaves;
+}
+
+public void setLeaves(String leaves) {
+	this.leaves = leaves;
 }
   
 }
